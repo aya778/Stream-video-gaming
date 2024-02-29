@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Stream video</title>
+</head>
+<body>
+    <div class="header">
+        <img src="img/fsg-removebg-preview.png   " class="header-logo">
+    </div>
+    <div class="container">
+        <h1>STREAM GAMING VIDEO</h1>
+        <div class="row">
+            <div class="col">
+                <div class="principale-img">
+                    <img src="img/Fornite.jpg" width="100%">
+                    <img src="img/bouton-play.png" class="play-btn" onclick="joueVideo('video/Fortnite.mp4')">
+                </div>
+            </div>
+            <div class="col">
+                <div class="row-petite-img">
+                    <div class="petite-img">
+                        <img src="img/Callof.jpg">
+                        <img src="img/bouton-play.png" class="play-btn" onclick="joueVideo('video/CallofDuty.mp4')">
+                    </div>
+                    <p>AFFRONTER UNE NOUVELLE MENACE DANS UN TERRE INCONNUE</p>
+                </div>
+                <div class="row-petite-img">
+                    <div class="petite-img">
+                        <img src="img/RatchetClank.jpg">
+                        <img src="img/bouton-play.png" class="play-btn" onclick="joueVideo('video/RatchetClank.mp4')">
+                    </div>
+                    <P>PARTER DANS UN AVENTURE INFINIE AVEC RATCHAT & CLANK</P>
+                </div>
+                <div class="row-petite-img">
+                    <div class="petite-img">
+                        <img src="img/fifa23.jpeg">
+                        <img src="img/bouton-play.png" class="play-btn" onclick="joueVideo('video/FIFA23.mp4')">
+                    </div>
+                    <P>COMPOSEZ LA MEILLEUR EQUIPE DE FOOT AVEC FIFA24</P>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video-play" id="videoPlay">
+        <video width="100%" controls autoplay id="maVideo">
+            <source src="video/Fortnite.mp4" type="video/mp4">
+        </video>
+        <img src="img/bouton-cls (1).png" class="bouton-cls" onclick="fermevideo()"> 
+    </div>
+    <div class="logo-container">
+        <img src="img/pc.png" class="logo">
+        <img src="img/ps.png" class="logo">
+        <img src="img/xbox.png" class="logo">
+        <img src="img/nintendo.png" class="logo">
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 | Created by AYA BRAHIM</p>
+    </div>
+    <script>
+        var videoPlay = document.getElementById('videoPlay');
+        var maVideo = document.getElementById('maVideo');
+
+        function fermevideo(){
+            videoPlay.style.display = 'none'
+            maVideo.muted = true;
+        }
+        function joueVideo(file){
+            maVideo.src = file;
+            videoPlay.style.display = "block";
+        }
+    </script>
+</body>
+</html>
