@@ -1,5 +1,4 @@
-// Importe les fonctions fermevideo et joueVideo depuis le fichier index.html
-// Remarque : Il est inhabituel d'importer des fonctions JavaScript depuis un fichier HTML.
+
 const { fermevideo, joueVideo } = require('./index.html');
 
 // Remplace la méthode getElementById par un faux (mock) créé par Jest
